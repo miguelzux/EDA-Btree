@@ -55,10 +55,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Key.cs" />
+    <Compile Include="Nodo.cs" />
     <Compile Include="Pagina.cs" />
     <Compile Include="PaginaHijo.cs" />
-    <Compile Include="Pointer.cs" />
+    <Compile Include="Puntero.cs" />
     <Compile Include="Utiles.cs" />
     <Compile Include="BTree.cs" />
     <Page Include="MainWindow.xaml">

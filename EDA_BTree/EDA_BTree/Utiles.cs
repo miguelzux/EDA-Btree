@@ -20,7 +20,7 @@ namespace EDA_BTree
     {
         static public readonly Duration duracionResaltado = TimeSpan.FromMilliseconds(100);
 
-        static Dictionary<Control, Style> OldStyles = new Dictionary<Control, Style>();
+        static Dictionary<Control, Style> estiloAnterior = new Dictionary<Control, Style>();
 
         static public DropShadowEffect shadow = new DropShadowEffect()
         {
@@ -31,14 +31,14 @@ namespace EDA_BTree
         
         static public void SetStyle(Control e, string type)
         {
-            if(!OldStyles.ContainsKey(e))
-                OldStyles[e] = e.Style;
+            if(!estiloAnterior.ContainsKey(e))
+                estiloAnterior[e] = e.Style;
             e.Style = (Style)Application.Current.Resources[type];
         }
 
         static public void ResetStyle(Control e)
         {
-            e.Style = OldStyles[e];
+            e.Style = estiloAnterior[e];
         }
 
         static public async Task highlight(Control e, string type = "Query")
